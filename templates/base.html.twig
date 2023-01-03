@@ -2,22 +2,28 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {# Affichage du titre de la page venant de la vue, suivi du nom du site collé à côté #}
-    <title>{% block title %}{% endblock %} - Le Blog de Batman </title>
-
+    <title>{% block title %}{% endblock %} - Le Blog de Batman</title>
+    {# Inclusion Font-Awesome #}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    {# Inclusion CSS Bootstrap #}
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    {# Inclusion Styles perso #}
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     {# Bloc pour ajouter des fichiers CSS additionnels #}
-    {% block CSS %}{% endblock %}
-
+    {% block css %}{% endblock %}
 </head>
 <body>
 
-    {# Bloc pour afficher le contenu des pages #}
-    {% block body %}{% endblock %}
+{# Bloc pour afficher le contenu des pages #}
+{% block body %}{% endblock %}
 
-    {# Bloc pour ajouter des fichiers JS additionnels #}
-    {% block js %}{% endblock %}
 
+{# Inclusion JS Bootstrap #}
+<script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+{# Bloc pour ajouter des fichiers JS additionnels #}
+{% block js %}{% endblock %}
 </body>
 </html>
