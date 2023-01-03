@@ -1,0 +1,22 @@
+{#Utilisation du squelette de page base.html.twig#}
+{% extends 'base.html.twig' %}
+
+{#Titre de la page#}
+{% block title %}Accueil{% endblock %}
+
+{#Contenu de la page#}
+{% block body %}
+
+    {# Grille Bootstrap #}
+    <div class="container-fluid">
+
+        {# Affichage d'une image (page visible en mode développement ici : http://localhost:8000/_error/500)#}
+        <div class="row">
+
+            <h1 class="text-center col-12 my-5">Erreur 500 : Problème interne au serveur</h1>
+
+        </div>
+
+    </div>
+
+{% endblock %}
