@@ -13,8 +13,8 @@ use Symfony\Component\Security\Core\User\UserInterface;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
 #[ORM\Table(name: '`user`')]
-#[UniqueEntity(fields: ['email'], message: 'Cette adresse email est déjà utilisée par un autre compte.')]
-#[UniqueEntity(fields: ['pseudonym'], message: 'Ce pseudonyme est déjà utilisé par un autre compte.')]
+#[UniqueEntity(fields: ['email'], message: 'Cette adresse email est déjà utilisée par un autre compte')]
+#[UniqueEntity(fields: ['pseudonym'], message: 'Ce pseudonyme est déjà utilisée par un autre compte')]
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
     #[ORM\Id]

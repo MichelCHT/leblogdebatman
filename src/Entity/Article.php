@@ -17,6 +17,9 @@ class Article
     #[ORM\Column(length: 150)]
     private ?string $title = null;
 
+    #[ORM\Column(type: Types::TEXT)]
+    private ?string $content = null;
+
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
     private ?\DateTimeInterface $publicationDate = null;
 
@@ -37,6 +40,18 @@ class Article
     public function setTitle(string $title): self
     {
         $this->title = $title;
+
+        return $this;
+    }
+
+    public function getContent(): ?string
+    {
+        return $this->content;
+    }
+
+    public function setContent(string $content): self
+    {
+        $this->content = $content;
 
         return $this;
     }
