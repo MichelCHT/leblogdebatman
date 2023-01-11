@@ -11,4 +11,3 @@ twig:
                 toolbar: full       # type de toolbar (basic / standard / full)
                 uiColor: "#FFFFFF"  # couleur de fond de l'éditeur
                 height: 400px       # hauteur de l'éditeur
-                
