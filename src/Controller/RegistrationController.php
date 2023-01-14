@@ -49,7 +49,7 @@ class RegistrationController extends AbstractController
             // Si le captcha est null ou s'il est invalide, on ajoute une erreur dans le formulaire
             if($recaptchaResponse == null || !$recaptcha->verify($recaptchaResponse, $ip) ){
 
-                $form->addError( new FormError('Veuillez remplir le captcha de sécurité') );
+                $form->addError( new FormError( 'Veuillez remplir le captcha de sécurité') );
             }
 
            if($form->isValid()) {
